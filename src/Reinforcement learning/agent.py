@@ -163,7 +163,6 @@ class Agent:
             self.base_portfolio_value = self.portfolio_value
         else:
             delayed_reward=0
-
         return self.immediate_reward,delayed_reward
 
 
