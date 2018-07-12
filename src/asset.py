@@ -8,9 +8,9 @@ import os
 print(os.cpu_count())
 
 tf.set_random_seed(777)  # reproducibility
-# tensorflow init 
+# tensorflow init
 tf.reset_default_graph()
-data = pd.read_excel('조비수정.xlsx')
+data = pd.read_excel('../data/조비수정.xlsx')
 
 def MinMaxScaler(data):
     numerator = data - np.min(data, 0)
@@ -19,12 +19,12 @@ def MinMaxScaler(data):
     return numerator / (denominator + 1e-7)
 
 # train Parameters
-seq_length = 7
+seq_length = 200
 data_dim = 43
 hidden_dim = 10
 output_dim = 1
 learning_rate = 0.01
-iterations = 30000
+iterations = 10000
 
 data2 = data
 # data2 = data[:10000]
@@ -46,8 +46,8 @@ for i in range(0, len(y) - seq_length):
     dataX.append(_x)
     dataY.append(_y)
 
-# train/test split 
-train_size = int(len(dataY) * 0.9)
+# train/test split
+train_size = int(len(dataY) * 0.98)
 test_size = len(dataY) - train_size
 trainX, testX = np.array(dataX[0:train_size]), np.array(
     dataX[train_size:len(dataX)])
