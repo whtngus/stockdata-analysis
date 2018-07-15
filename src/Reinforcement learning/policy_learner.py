@@ -248,6 +248,3 @@ class PolilcyLearner:
             return
         self.policy_network.load_model(model_path=model_path)
         self.fit(balance=balance, num_epoches=1, learning=False)
-
-
-
