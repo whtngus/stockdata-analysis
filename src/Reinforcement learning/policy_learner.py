@@ -21,7 +21,7 @@ from visualizer import Visualizer
 logger = logging.getLogger(__name__)
 
 
-class PolilcyLearner:
+class PolicyLearner:
     # chart_data Environment객체 생시 넣어줌
     def __init__(self,stock_code,chart_data,training_data = None,min_trading_unit=1, max_trading_unit=2,delayed_reward_threshold=.05,lr=0.01):
         #종목코드
@@ -50,7 +50,7 @@ class PolilcyLearner:
     #max_memory 배치 학습 데이터를 만들기 위해 과거 데이터를 저장할 배열 balance 에이전트 초기 투자 자본금
     def fit(self,num_epoches=1000, max_memory=60, balance=1000000, discount_factor=0, start_epsilon=.5, learning= True):
         logger.info("LR:{lr}, DF : {discount_factor}, TU : [{min_trading_unit}, {max_trading_unit}],"
-                    "DRT: {delayed_reward_threshold}".format(lr=self.policy_network.lr,discount_factor=discount_factor,min_trading_unit,self.agent.min_trading_unit,max_trading_unit=self.agent.max_trading_unit,
+                    "DRT: {delayed_reward_threshold}".format(lr=self.policy_network.lr,discount_factor=discount_factor,min_trading_unit=self.agent.min_trading_unit,max_trading_unit=self.agent.max_trading_unit,
                                                              delayed_reward_threshold=self.agent.delayed_reward_threshold))
 
         #가시화 준비
@@ -157,7 +157,7 @@ class PolilcyLearner:
                     #배치 학습 데이터 크기  max_memory보다 작아야 함
                     batch_size = min(batch_size, max_memory)
                     #배치 학습 데이터 생성
-                    x, y = self.__get_batch(memory,batch_size,discount_factor,delayed_reward)
+                    x, y = self._get_batch(memory,batch_size,discount_factor,delayed_reward)
 
                     if len(x) >0:
                         #긍부정 학습횟수 체크

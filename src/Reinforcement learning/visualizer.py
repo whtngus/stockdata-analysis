@@ -1,6 +1,6 @@
 import numpy as np
 import matplotlib .pyplot as plt
-from mpl_finance import candletick_ohlc
+from mpl_finance import candlestick_ohlc
 
 class Visualizer:
 
@@ -30,15 +30,15 @@ class Visualizer:
         ohlc = np.hstack((x.reshape(-1,1),np.array(chart_data)[:,1:-1]))
         #self.axes[0]에 봉 차트 출력
         #양봉은 빨간색 음봉은 파란색 표시
-        candletick_ohlc(ax,ohlc,colorup='r',colordown='b')
+        candlestick_ohlc(ax,ohlc,colorup='r',colordown='b')
 
 
     def plot(self,epoch_str=None,num_epoches=None,epsilon=None,action_list=None,actions=None,num_stocks=None,outvals=None,exps=None,learning=None,initial_balance=None,pvs=None):
         # epoch_str 제목으로 표시할 에포크
         #모든 차트가 공유할 x축 데이터
-        x = np.array(len(actions))
+        x = np.arange(len(actions))
         # 에이전트의 행동 배열
-        actions = np.array(action_list)
+        actions = np.array(actions)
         #정책 신경망의 출력 배열
         outvals = np.array(outvals)
         #초기 자본금 배열
@@ -116,7 +116,7 @@ class Visualizer:
             ax.get_xaxis().get_major_formatter().set_scientific(False)
             ax.get_yaxis().get_major_formatter().set_scientific(False)
             # x축 간격을 일정하게 설정
-            ax.ticklable_format(useOffset=False)
+            ax.ticklabel_format(useOffset=False)
 
 
     def save(self, path):

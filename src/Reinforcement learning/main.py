@@ -11,10 +11,11 @@ if __name__ == '__main__':
     # 로그 기록
     log_dir = os.path.join(settings.BASE_DIR, 'logs/%s' % stock_code)
     timestr = settings.get_time_str()
+
     if not os.path.exists('logs/%s' % stock_code):
         os.makedirs('logs/%s' % stock_code)
-    file_handler = logging.FileHandler(filename=os.path.join(
-        log_dir, "%s_%s.log" % (stock_code, timestr)), encoding='utf-8')
+
+    file_handler = logging.FileHandler(filename=os.path.join(log_dir, "%s_%s.log" % (stock_code, timestr)), encoding='utf-8')
     stream_handler = logging.StreamHandler()
     file_handler.setLevel(logging.DEBUG)
     stream_handler.setLevel(logging.INFO)
@@ -29,8 +30,9 @@ if __name__ == '__main__':
     training_data = data_manager.build_training_data(prep_data)
 
     # 기간 필터링
-    training_data = training_data[(training_data['date'] >= '2017-01-01') &
-                                  (training_data['date'] <= '2017-12-31')]
+    # training_data = training_data[(training_data['date'] >= '2017-01-01') &
+    #                               (training_data['date'] <= '2017-12-31')]
+
     training_data = training_data.dropna()
 
     # 차트 데이터 분리

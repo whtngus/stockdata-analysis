@@ -14,7 +14,7 @@ class Agent:
     ACTION_SELL = 1 #매도
     ACTION_HOLD = 2 #관망
     ACTIONS = [ACTION_BUY,ACTION_SELL] # 인공 신경망에서 확률을 구할 행동들
-    MUM_ACTIONS = len(ACTIONS) # 인공 신경망에서 고려할 출력값의 개수
+    NUM_ACTIONS = len(ACTIONS) # 인공 신경망에서 고려할 출력값의 개수
 
     # environment객체 최소 최대 매매단위
     def __init__(self,environment,min_trading_unit=1,max_trading_unit =2 ,delayed_reward_threshold = .05):
