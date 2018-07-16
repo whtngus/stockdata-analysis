@@ -1,2 +1,0 @@
-LR:0.001, DF : 0, TU : [1, 2],DRT: 0.2
-[Epoch 0001/1000]	Epsilon:0.5000	#Expl.:3941/8003	#Buy:2378	#Sell:1880	#Hold:3745	#Stocks:559	PV:\5,701,647	POS:125	NEG:19	Loss:  0.127816
