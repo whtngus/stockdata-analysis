@@ -1,0 +1,5 @@
+LR:0.001, DF : 0, TU : [1, 2],DRT: 0.2
+[Epoch 0001/1000]	Epsilon:0.5000	#Expl.:3941/8003	#Buy:2378	#Sell:1880	#Hold:3745	#Stocks:559	PV:\5,701,647	POS:125	NEG:19	Loss:  0.127816
+[Epoch 0002/1000]	Epsilon:0.4995	#Expl.:4044/8003	#Buy:2560	#Sell:2188	#Hold:3255	#Stocks:807	PV:\8,294,458	POS:113	NEG:111	Loss:  0.128784
+[Epoch 0003/1000]	Epsilon:0.4990	#Expl.:3951/8003	#Buy:2283	#Sell:2221	#Hold:3499	#Stocks:674	PV:\11,328,826	POS:151	NEG:132	Loss:  0.127445
+[Epoch 0004/1000]	Epsilon:0.4985	#Expl.:3936/8003	#Buy:2326	#Sell:1886	#Hold:3791	#Stocks:397	PV:\8,210,851	POS:123	NEG:16	Loss:  0.126624
