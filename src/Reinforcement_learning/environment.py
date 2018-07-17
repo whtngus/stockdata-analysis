@@ -4,7 +4,6 @@ class Environment:
 	#차트 데이터를 할당 받음 
 	def __init__(self,chart_data=None):
 		self.chart_data = chart_data
-		print("chart_data : ",self.chart_data.iloc[self.idx])
 		self.observation = None
 		self.idx = -1
 
