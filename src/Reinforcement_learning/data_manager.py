@@ -13,7 +13,7 @@ def preprocess(chart_data):
     prep_data = chart_data
     # windows = [5, 10, 20, 60, 120]
     # index number
-    windows = [5, 15, 33, 56, 224,448]
+    windows = [5, 10, 20, 60, 120, 240,480]
     for window in windows:
         # prep_data['close_ma{}'.format(window)] = prep_data['close'].rolling(window).mean()
         prep_data['{}거래량'.format(window)] = (
@@ -47,7 +47,7 @@ def build_training_data(prep_data):
     #         .replace(to_replace=0, method='ffill') \
     #         .replace(to_replace=0, method='bfill').values
 
-    windows = [5, 15, 33, 56, 224, 448]
+    windows = [5, 10, 20, 60, 120, 240,480]
     for window in windows:
         training_data['%d거래량' % window] = \
             (training_data['거래량'] - training_data['%d거래량' % window]) / \

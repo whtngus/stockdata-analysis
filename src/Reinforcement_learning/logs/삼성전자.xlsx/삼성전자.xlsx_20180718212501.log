@@ -1,0 +1,17 @@
+LR:0.001, DF : 0, TU : [1, 2],DRT: 0.2
+findfont: Matching :family=sans-serif:style=normal:variant=normal:weight=normal:stretch=normal:size=10.0 to DejaVu Sans ('C:\\Users\\shing\\Anaconda3\\lib\\site-packages\\matplotlib\\mpl-data\\fonts\\ttf\\DejaVuSans.ttf') with score of 0.050000
+findfont: Matching :family=sans-serif:style=normal:variant=normal:weight=normal:stretch=normal:size=12.0 to DejaVu Sans ('C:\\Users\\shing\\Anaconda3\\lib\\site-packages\\matplotlib\\mpl-data\\fonts\\ttf\\DejaVuSans.ttf') with score of 0.050000
+[Epoch 0001/1000]	Epsilon:0.5000	#Expl.:3994/7969	#Buy:2005	#Sell:1686	#Hold:4278	#Stocks:0	PV:\9,989,269	POS:6	NEG:126	Loss:  0.127803
+[Epoch 0002/1000]	Epsilon:0.4995	#Expl.:3944/7969	#Buy:1985	#Sell:1673	#Hold:4311	#Stocks:0	PV:\10,003,452	POS:131	NEG:1	Loss:  0.128086
+[Epoch 0003/1000]	Epsilon:0.4990	#Expl.:3976/7969	#Buy:1994	#Sell:1676	#Hold:4299	#Stocks:0	PV:\9,972,581	POS:6	NEG:126	Loss:  0.128210
+[Epoch 0004/1000]	Epsilon:0.4985	#Expl.:3978/7969	#Buy:1945	#Sell:1650	#Hold:4374	#Stocks:0	PV:\9,982,634	POS:0	NEG:132	Loss:  0.126721
+[Epoch 0005/1000]	Epsilon:0.4980	#Expl.:3954/7969	#Buy:1984	#Sell:1662	#Hold:4323	#Stocks:0	PV:\9,978,139	POS:5	NEG:127	Loss:  0.125557
+[Epoch 0006/1000]	Epsilon:0.4975	#Expl.:3980/7969	#Buy:1954	#Sell:1648	#Hold:4367	#Stocks:2	PV:\9,999,494	POS:50	NEG:82	Loss:  0.127270
+[Epoch 0007/1000]	Epsilon:0.4970	#Expl.:3962/7969	#Buy:1986	#Sell:1664	#Hold:4319	#Stocks:4	PV:\10,021,514	POS:132	NEG:0	Loss:  0.130215
+[Epoch 0008/1000]	Epsilon:0.4965	#Expl.:3936/7969	#Buy:1938	#Sell:1660	#Hold:4371	#Stocks:1	PV:\9,996,017	POS:47	NEG:85	Loss:  0.126831
+[Epoch 0009/1000]	Epsilon:0.4960	#Expl.:3947/7969	#Buy:1973	#Sell:1673	#Hold:4323	#Stocks:0	PV:\9,982,448	POS:1	NEG:131	Loss:  0.124948
+[Epoch 0010/1000]	Epsilon:0.4955	#Expl.:3989/7969	#Buy:1967	#Sell:1639	#Hold:4363	#Stocks:0	PV:\9,995,985	POS:4	NEG:128	Loss:  0.123580
+[Epoch 0011/1000]	Epsilon:0.4950	#Expl.:3906/7969	#Buy:2014	#Sell:1670	#Hold:4285	#Stocks:1	PV:\10,023,105	POS:130	NEG:2	Loss:  0.131636
+[Epoch 0012/1000]	Epsilon:0.4945	#Expl.:3939/7969	#Buy:1951	#Sell:1648	#Hold:4370	#Stocks:1	PV:\10,006,993	POS:130	NEG:2	Loss:  0.130468
+[Epoch 0013/1000]	Epsilon:0.4940	#Expl.:3953/7969	#Buy:2011	#Sell:1681	#Hold:4277	#Stocks:0	PV:\10,004,961	POS:132	NEG:0	Loss:  0.129290
+[Epoch 0014/1000]	Epsilon:0.4935	#Expl.:3944/7969	#Buy:2012	#Sell:1699	#Hold:4258	#Stocks:0	PV:\9,950,405	POS:0	NEG:132	Loss:  0.126343

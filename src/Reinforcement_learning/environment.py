@@ -1,6 +1,6 @@
 class Environment:
 	#종가 위치 - 데이터에 맞게 적기
-	PRICE_IDX =1
+	PRICE_IDX = 1
 	#차트 데이터를 할당 받음 
 	def __init__(self,chart_data=None):
 		self.chart_data = chart_data

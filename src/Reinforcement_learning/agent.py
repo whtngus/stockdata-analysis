@@ -6,8 +6,8 @@ class Agent:
     STATE_DIM = 2
 
     #매매 수수료 및 세금
-    TRADING_CHARGE = 0 # 거래 수수료 미고려 0.015
-    TRADING_TAX = 0 #거래세 미고려 0.3
+    TRADING_CHARGE = 0.015 # 거래 수수료 미고려 0.015
+    TRADING_TAX = 0.3 #거래세 미고려 0.3
 
     #행동
     ACTION_BUY = 0 #매수

@@ -6,7 +6,7 @@ from policy_learner import PolicyLearner
 
 
 if __name__ == '__main__':
-    stock_code = 'chobi.xlsx'  # 삼성전자
+    stock_code = '삼성전자.xlsx'  # 삼성전자
 
     # 로그 기록
     log_dir = os.path.join(settings.BASE_DIR, 'logs/%s' % stock_code)
@@ -40,12 +40,9 @@ if __name__ == '__main__':
     chart_data = training_data[features_chart_data]
     # 학습 데이터 분리
     features_training_data = [
-        '종가',5,15,33,56,224,448,'전환선 9','기준선 26','후행스팬 26','선행스팬1 9,26','선행스팬2 52,26',
-        'Bollinger Bands중심선 20,2.4','상한선','하한선','Para SAR 강세패턴','약세패턴','골든크로스','데드크로스',
-        '##5이평 15일선 골든크로스신호','##5이평 20일선 골든크로스신호','거래량',
-        '5거래량','15거래량','33거래량','56거래량','224거래량','448거래량','OBV','Signal 9',
-        'VR 21','Slow %K 20,5','Slow %D 3','RSI 21','CCI 42'
-
+        '종가',5,10,20,60,120,240,480,'전환선 9','기준선 26','후행스팬 26','선행스팬1 9,26','선행스팬2 52,26',
+        'Bollinger Bands중심선 20,2.4','상한선','하한선','선행볼린저','Para SAR 강세패턴','약세패턴',
+        '거래량','5거래량','10거래량','20거래량','60거래량','120거래량','240거래량', '480거래량'
     ]
     training_data = training_data[features_training_data]
 
