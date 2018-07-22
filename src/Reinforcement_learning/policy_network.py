@@ -2,6 +2,8 @@ import numpy as np
 from keras.models import Sequential
 from keras.layers import Activation,LSTM,Dense,BatchNormalization
 from keras.optimizers import  sgd
+from keras.optimizers import Adam
+from keras.optimizers import Adadelta
 
 class PolicyNetwork:
 
@@ -19,7 +21,11 @@ class PolicyNetwork:
         self.model.add(LSTM(256,return_sequences=False,stateful=False,dropout=0.5))
         self.model.add(Dense(output_dim))
         self.model.add(Activation('sigmoid'))
-
+        # print("help")
+        # print(help(Adadelta))
+        # adadelta = Adadelta(lr=lr, rho=0.95, epsilon=None, decay=0.0)
+        # adam = Adam(lr=self.lr,beta_1=0.9,beta_2=0.999)
+        # self.model.compile(optimizer=Adam(lr=self.lr,beta_1=0.9,beta_2=0.999, epsilon=None, decay=0.0, amsgrad=False),metrics=['accuracy'],loss='mse')
         self.model.compile(optimizer=sgd(lr=lr),loss='mse')
         self.prob = None
 

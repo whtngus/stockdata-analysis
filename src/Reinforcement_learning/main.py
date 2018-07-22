@@ -38,12 +38,14 @@ if __name__ == '__main__':
     # 차트 데이터 분리
     features_chart_data = ['날짜','종가', '거래량']
     chart_data = training_data[features_chart_data]
+
     # 학습 데이터 분리
     features_training_data = [
         '종가',5,10,20,60,120,240,480,'전환선 9','기준선 26','후행스팬 26','선행스팬1 9,26','선행스팬2 52,26',
         'Bollinger Bands중심선 20,2.4','상한선','하한선','선행볼린저','Para SAR 강세패턴','약세패턴',
         '거래량','5거래량','10거래량','20거래량','60거래량','120거래량','240거래량', '480거래량'
     ]
+
     training_data = training_data[features_training_data]
 
     # 강화학습 시작

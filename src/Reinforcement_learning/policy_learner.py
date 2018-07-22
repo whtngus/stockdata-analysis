@@ -166,6 +166,15 @@ class PolicyLearner:
                         else:
                             neg_learning_cnt += 1
                         #정책 신경망 갱신
+                        # print("x : ",x)
+                        # print("y : ",y)
+                        # print("len(x) : ",len(x))
+                        # print("len(y) : ",len(y))
+                        # print("type(x): ",type(x))
+                        # print("type(y): ", type(y))
+                        # print("loss : ",loss)
+                        # 1.123123124
+                        # [12.23,54.3]
                         loss += self.policy_network.train_on_batch(x,y)
                         memory_learning_idx.append([itr_cnt,delayed_reward])
                     batch_size =0
